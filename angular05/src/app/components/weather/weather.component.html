@@ -1,0 +1,41 @@
+<h2>Météo du jour</h2>
+<select [(ngModel)]="weather.city">
+  <option value="" disabled selected hidden>
+    Ville
+  </option>
+  <option *ngFor="let city of cities" [value]="city">
+    {{ city }}
+  </option>
+</select>
+<input [(ngModel)]="weather.temperature" placeholder="Temperature">
+<select [(ngModel)]="weather.condition">
+  <option value="" disabled selected hidden>
+    Condition
+  </option>
+  <option *ngFor="let condition of conditions" [value]="condition">
+    {{ condition }}
+  </option>
+</select>
+
+<button (click)="save()">Enregistrer</button>
+<table>
+  <thead>
+    <tr>
+      <th>Ville</th>
+      <th>Température</th>
+      <th>Condition</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let w of weathers">
+      <td>{{w.city}}</td>
+      <td>{{w.temperature}}</td>
+      <td>{{w.condition}}</td>
+      <td>
+        <button (click)="edit(w)">Éditer</button>
+        <button (click)="delete(w.id)">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

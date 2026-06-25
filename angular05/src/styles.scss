@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 0 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #eee;
+}
+p {
+  margin: 0 0 6px 0;
+}
+input {
+  padding: 4px;
+  margin: 0 5px 0 0;
+  border: 1px solid #666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+select {
+  padding: 4px;
+  margin: 0 5px 0 0;
+  border: 1px solid #666;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+button {
+  padding: 3px;
+  margin: 0 5px 0 0;
+  min-width: 120px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+header {
+  .container {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1000px;
+    min-width: 280px;
+    background-color: #ddf;
+    .themetitle {
+      margin: 0 0 8px 0;
+      padding: 0;
+      font-size: 2.8rem;
+      font-weight: bold;
+      line-height: 3rem;
+    }
+    .subtitle {
+      margin: 0 0 8px 0;
+      padding: 0;
+      font-size: 1.3rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+main {
+  .container {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1000px;
+    min-width: 280px;
+    background-color: #fff;
+    h2 {
+      margin: 12px 0 8px 0;
+      font-size: 2rem;
+    }
+  }
+  table {
+    margin: 12px 0 0 0;
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    background-color: #eef;
+    th, td {
+      padding: 5px;
+      border: none;
+    }
+    thead {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}
