@@ -13,14 +13,14 @@ p {
 }
 input {
   padding: 4px;
-  margin: 0 5px 0 0;
+  margin: 0 5px 5px 0;
   border: 1px solid #666;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
 select {
   padding: 4px;
-  margin: 0 5px 0 0;
+  margin: 0 5px 5px 0;
   border: 1px solid #666;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -67,19 +67,32 @@ main {
       font-size: 2rem;
     }
   }
-  table {
-    margin: 12px 0 0 0;
-    width: 100%;
-    border-collapse: collapse;
-    border: none;
-    background-color: #eef;
-    th, td {
-      padding: 5px;
-      border: none;
-    }
-    thead {
-      color: #fff;
-      background-color: #000;
-    }
-  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+.table45 {
+  margin: 12px 0;
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  border: none;
+  background-color: #eef
+}
+.table45 thead {
+  color: #fff;
+  background-color: #000
+}
+.table45 th {
+  padding: 5px;
+  border: 1px solid #000;
+}
+.table45 td {
+  padding: 5px;
+  border: 1px solid #ccf;
+}
+.table45 td:nth-child(4) {
+  width: 300px;
+  text-align: center;
 }

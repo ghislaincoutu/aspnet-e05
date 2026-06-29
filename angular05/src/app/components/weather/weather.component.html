@@ -18,24 +18,26 @@
 </select>
 
 <button (click)="save()">Enregistrer</button>
-<table>
-  <thead>
-    <tr>
-      <th>Ville</th>
-      <th>Température</th>
-      <th>Condition</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let w of weathers">
-      <td>{{w.city}}</td>
-      <td>{{w.temperature}}</td>
-      <td>{{w.condition}}</td>
-      <td>
-        <button (click)="edit(w)">Éditer</button>
-        <button (click)="delete(w.id)">Supprimer</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-container">
+  <table class="table45">
+    <thead>
+      <tr>
+        <th>Ville</th>
+        <th>Température</th>
+        <th>Condition</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let w of weathers">
+        <td>{{w.city}}</td>
+        <td>{{w.temperature}}</td>
+        <td>{{w.condition}}</td>
+        <td>
+          <button (click)="edit(w)">Éditer</button>
+          <button (click)="delete(w.id)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
