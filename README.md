@@ -1,6 +1,6 @@
-# aspnet-e07 &mdash; Programmation d’une application ASP.NET CRUD
+# aspnet-e05 &mdash; Programmation d’une application Web (CRUD)
 
-## Création des fichiers ASP.NET
+## Création des fichiers ASP.NET Web API
 À partir du dossier `aspnet-e05`, exécuter les commandes suivantes :
 ```sh
 cd aspnet-e05
@@ -20,7 +20,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory --version 8.0.12
 dotnet list package
 ```
 
-## Sous-répertoires et fichiers supplémentaires générés pour réaliser l’excerice
+## Sous-répertoires et fichiers supplémentaires générés pour réaliser l’application
 ```
 /aspnet05/Controllers/WeatherControllers.cs
 /aspnet05/Data/AppDbContext.cs
@@ -42,7 +42,7 @@ Voici tous les sous-répertoires reliées à l’application :
 ```sh
 npx @angular/cli@20 new angular05
 ```
-Au cours de l’installation des fichiers, sélectionner les options par défaut.
+Au cours de la création des fichiers, sélectionner les options par défaut.
 
 ## Fichiers Angular générés pour réaliser l’exercice
 ```sh
@@ -138,4 +138,4 @@ sudo systemctl status aspnet05
 ```
 
 ## Accès à l’application ASP.NET à partir de Apache
-Il ne faut jamais laisser le serveur Web Kestrel (celui qui est intégré à ASP.NET Core) être accessible directement depuis l’extérieur, comme un serveur Web public. Les fichiers doivent être localisés dans le sous-répertoire `/var/www/aspnet05`, et non dans le sous-répertoire `/var/www/html/aspnet05`.
+Il ne faut pas que le serveur Web Kestrel (celui qui est intégré à ASP.NET Core) soit accessible directement depuis l’extérieur, comme un serveur Web public. Les fichiers doivent être localisés dans le sous-répertoire `/var/www/aspnet05`, et non dans le sous-répertoire `/var/www/html/aspnet05`.
