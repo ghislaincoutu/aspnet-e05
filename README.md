@@ -20,7 +20,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory --version 8.0.12
 dotnet list package
 ```
 
-## Sous-répertoires et fichiers supplémentaires générés pour réaliser l’application
+## Sous-répertoires et fichiers supplémentaires générés pour programmer l’application
 ```
 /aspnet05/Controllers/WeatherControllers.cs
 /aspnet05/Data/AppDbContext.cs
@@ -28,9 +28,9 @@ dotnet list package
 ```
 
 ## Sous-répertoires reliés à l’application
-Voici tous les sous-répertoires reliées à l’application :
+Voici les sous-répertoires reliées à l’application :
 ```
-/home/dev2601/Documents/XD01/aspnet-e05/
+~/Documents/XD01/aspnet-e05/
 /etc/apache2/sites-available/
 /etc/systemd/system/
 /var/www/aspnet05/
@@ -54,10 +54,10 @@ ng generate component components/weather --type=component
 À partir d’un premier terminal, exécuter les commandes suivantes :
 ```sh
 cd aspnet05
-dotnet run --urls="http://localhost:5462"
+dotnet run --urls="http://localhost:5000"
 ```
 L’application ASP.NET est disponible à partir de l’adresse URL suivante :
-http://localhost:5462/api/weather
+http://localhost:5000/api/weather
 
 À partir d’un deuxième terminal, exécuter les commandes suivantes :
 ```sh
