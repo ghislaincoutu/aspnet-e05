@@ -10,7 +10,6 @@ apply_pause "Appuyer sur la touche [Retour] pour continuer..."
 
 # Source (so)
 so=/home/dev2607/Documents/XD01/aspnet-e05/aspnet05/bin/Release/net8.0/linux-x64/publish
-
 # Destination (de)
 de=/var/www/aspnet05
 

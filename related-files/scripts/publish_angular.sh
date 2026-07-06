@@ -9,7 +9,6 @@ apply_pause "Appuyer sur la touche [Retour] pour continuer..."
 
 # Source (so)
 so=/home/dev2607/Documents/XD01/aspnet-e05/angular05/dist/angular05/browser
-
 # Destination (de)
 de=/var/www/html/d003/aspnet-e05
 

@@ -10,8 +10,18 @@ cd aspnet05
 dotnet new gitignore
 ```
 
-## Port réservé à l’application aspnet-e05
-> 5462
+## Création des fichiers Angular 20
+À partir du dossier `aspnet-e05`, exécuter les commandes suivantes :
+```sh
+npx @angular/cli@20 new angular05
+```
+Au cours de la création des fichiers, sélectionner les options par défaut.
+
+## Fichiers Angular générés pour réaliser l’exercice
+```sh
+ng generate service services/weather --type=service
+ng generate component components/weather --type=component
+```
 
 ## Installation de la librairie _EF Core In-Memory Database Provider_
 La librairie _EF Core In-Memory Database Provider_ ne fonctionnera pas en environnement de production seulement avec le cadre d’applications **.NET Runtime** qui est installé sur le serveur de production.
@@ -20,6 +30,9 @@ dotnet --version
 dotnet add package Microsoft.EntityFrameworkCore.InMemory --version 8.0.12
 dotnet list package
 ```
+
+## Port réservé à l’application aspnet-e05
+> 5462
 
 ## Sous-répertoires et fichiers supplémentaires générés pour programmer l’application
 ```
@@ -36,19 +49,6 @@ Voici les sous-répertoires reliées à l’application :
 /etc/systemd/system/
 /var/www/aspnet05/
 /var/www/html/d003/aspnet-e05/
-```
-
-## Création des fichiers Angular 20
-À partir du dossier `aspnet-e05`, exécuter les commandes suivantes :
-```sh
-npx @angular/cli@20 new angular05
-```
-Au cours de la création des fichiers, sélectionner les options par défaut.
-
-## Fichiers Angular générés pour réaliser l’exercice
-```sh
-ng generate service services/weather --type=service
-ng generate component components/weather --type=component
 ```
 
 ## Activation des applications ASP.NET et Angular
@@ -102,6 +102,9 @@ L’application est disponible à partir de l’adresse URL suivante :
 http://localhost:5462/api/weather
 ```
 
+## Accès à l’application ASP.NET à partir de Apache
+Il ne faut pas que le serveur Web Kestrel (celui qui est intégré à ASP.NET Core) soit accessible directement depuis l’extérieur, comme un serveur Web public. Les fichiers doivent être localisés dans le sous-répertoire `/var/www/aspnet05`, et non dans le sous-répertoire `/var/www/html/aspnet05`.
+
 ## Publication de l’application sur un serveur Web en tant que service
 Les fichiers compilés `ASP.NET` doivent être localisés dans le sous-répertoire suivant :
 ```sh
@@ -137,6 +140,3 @@ sudo systemctl enable aspnet05
 sudo systemctl start aspnet05
 sudo systemctl status aspnet05
 ```
-
-## Accès à l’application ASP.NET à partir de Apache
-Il ne faut pas que le serveur Web Kestrel (celui qui est intégré à ASP.NET Core) soit accessible directement depuis l’extérieur, comme un serveur Web public. Les fichiers doivent être localisés dans le sous-répertoire `/var/www/aspnet05`, et non dans le sous-répertoire `/var/www/html/aspnet05`.
