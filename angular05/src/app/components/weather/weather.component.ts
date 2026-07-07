@@ -9,13 +9,12 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, FormsModule],
   templateUrl: './weather.component.html'
 })
-export class WeatherComponent implements OnInit {
 
+export class WeatherComponent implements OnInit {
   weathers: Weather[] = [];
-  weather: Weather = { id: 0, city: '', temperature: 0, condition: '' };
+  weather12: Weather = { id: 0, city: '', temperature: 0, condition: '' };
   cities = ['Montréal', 'Québec', 'Trois-Rivières'];
   conditions = ['Ensoleillé', 'Nuageux', 'Pluvieux', 'Orageux'];
-
   constructor(private service: WeatherService) { }
 
   ngOnInit() {
@@ -27,20 +26,19 @@ export class WeatherComponent implements OnInit {
   }
 
   save() {
-    if (this.weather.id === 0) {
-      this.service.create(this.weather).subscribe(() => this.load());
+    if (this.weather12.id === 0) {
+      this.service.create(this.weather12).subscribe(() => this.load());
     } else {
-      this.service.update(this.weather).subscribe(() => this.load());
+      this.service.update(this.weather12).subscribe(() => this.load());
     }
-    this.weather = { id: 0, city: '', temperature: 0, condition: '' };
+    this.weather12 = { id: 0, city: '', temperature: 0, condition: '' };
   }
 
   edit(w: Weather) {
-    this.weather = { ...w };
+    this.weather12 = { ...w };
   }
 
   delete(id: number) {
     this.service.delete(id).subscribe(() => this.load());
   }
-
 }

@@ -12,6 +12,7 @@ export interface Weather {
 @Injectable({
   providedIn: 'root'
 })
+
 export class WeatherService {
   private api = "/api/weather";
   constructor(private http: HttpClient) { }
