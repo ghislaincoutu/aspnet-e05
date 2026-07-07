@@ -32,7 +32,6 @@ export class WeatherComponent implements OnInit {
     } else {
       this.service.update(this.weather).subscribe(() => this.load());
     }
-
     this.weather = { id: 0, city: '', temperature: 0, condition: '' };
   }
 
