@@ -1,3 +1,6 @@
+$color01: hsl(0, 70%, 90%); // Saturation: 70
+$color02: hsl(0, 10%, 90%); // Saturation: 10
+
 * {
   box-sizing: border-box;
 }
@@ -39,19 +42,18 @@ header {
     padding: 10px;
     max-width: 1000px;
     min-width: 280px;
-    background-color: #ddf;
+    background-color: $color01;
     .themetitle {
-      margin: 0 0 8px 0;
+      margin: 0 0 6px 0;
       padding: 0;
       font-size: 2.6rem;
-      font-weight: bold;
-      line-height: 2.8rem;
+      font-weight: 700;
+      line-height: 2.8rem
     }
     .subtitle {
-      margin: 0 0 8px 0;
-      padding: 0;
+      margin: 0;
       font-size: 1.3rem;
-      line-height: 1.4rem;
+      line-height: 1.4rem
     }
   }
 }
@@ -61,7 +63,12 @@ main {
     padding: 10px;
     max-width: 1000px;
     min-width: 280px;
+    min-height: 400px;
     background-color: #fff;
+    .technologies {
+      font-size: 1.4rem;
+      text-align: right;
+    }
     h2 {
       margin: 12px 0 8px 0;
       font-size: 2rem;
@@ -78,7 +85,7 @@ main {
   min-width: 700px;
   border-collapse: collapse;
   border: none;
-  background-color: #eef
+  background-color: $color02;
 }
 .table45 thead {
   color: #fff;
@@ -90,7 +97,7 @@ main {
 }
 .table45 td {
   padding: 5px;
-  border: 1px solid #ccf;
+  border: 1px solid #666;
 }
 .table45 td:nth-child(4) {
   width: 300px;
