@@ -38,7 +38,21 @@ export class WeatherComponent implements OnInit {
     this.weather12 = { ...w };
   }
 
-  delete(id: number) {
-    this.service.delete(id).subscribe(() => this.load());
+  delete(id: number): void {
+    const confirmation = window.confirm(
+      'Voulez-vous vraiment supprimer cet enregistrement?'
+    );
+    if (!confirmation) {
+      return;
+    }
+    this.service.delete(id).subscribe({
+      next: () => {
+        this.load();
+      },
+      error: (err) => {
+        console.error('Erreur lors de la suppression', err);
+        window.alert('Une erreur est survenue lors de la suppression.');
+      }
+    });
   }
 }
